@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package userpb.v1;
+
+option go_package = "pkg/userpb";
+
+service UserManagement{
+    //grpc server provide 2 services (rpc call)
+    rpc CreateUser (NewUser) returns (User) {}
+    rpc GetUser (GetUsersParams) returns (UserList) {} 
+}
+
+message NewUser {
+    string name = 1;
+    int32 age = 2;
+}
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+}
+
+
+message GetUsersParams {
+
+}
+
+message UserList {
+   repeated User users = 1;
+}
