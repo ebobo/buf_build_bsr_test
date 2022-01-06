@@ -9,7 +9,10 @@ gen: clean
 clean:
 	@rm -rf pkg
 
-publish:
+breaking:
+	@buf breaking --against "https://github.com/ebobo/buf_build_bsr_test/archive/main.zip#strip_components=1"
+
+publish: breaking
 	@buf push
 
 dep:
