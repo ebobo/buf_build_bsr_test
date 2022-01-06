@@ -4,7 +4,7 @@ package userpb.v1;
 
 option go_package = "pkg/userpb";
 
-service UserManagement{
+service UserService{
     //grpc server provide 2 services (rpc call)
     rpc CreateUser (NewUser) returns (User) {}
     rpc GetUser (GetUsersParams) returns (UserList) {} 

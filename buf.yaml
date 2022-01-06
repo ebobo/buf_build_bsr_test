@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/ebobo/user
+name: buf.build/ebobo/test
 lint:
   use:
     - DEFAULT
